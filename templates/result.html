@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezultate CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="upload-box">
+        <h2>📄 Fișier încărcat: <br><span style="color: #007BFF;">{{ filename }}</span></h2>
+        
+        <h3>🔍 Job-ul potrivit identificat:</h3>
+        <h2><pre>{{ text }}</pre></h2>
+
+        <h2 style="margin-top: 30px;">🔗 Lista de link-uri recomandate</h2>
+        <ul>
+            {% for l in link %}
+                <li><a href="{{ l }}" class="job-link" target="_blank">{{ l }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">⬅ Încarcă alt fișier</a>
+    </div>
+</body>
+</html>

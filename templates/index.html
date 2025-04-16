@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="title">
+    <h2>Aplicație de căutare job</h2>
+</div>
+<div class="upload-box">
+    <h2>Încarcă CV-ul</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" accept="application/pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+
+{% endblock %}
